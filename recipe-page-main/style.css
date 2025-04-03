@@ -1,0 +1,104 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+    font-family: 'Outfit', Courier;
+    font-size:12px;
+}
+body{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content: center;
+    min-height:100vh;
+    background-color: hsl(30, 54%, 90%);
+
+}
+main{
+    width:100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+p{
+    font-size: 12px;
+}
+.card{
+    margin:45px;
+    width:600px;
+    padding:25px;
+    background-color: aliceblue;
+    overflow: hidden;
+    min-height:90vh;
+    border-radius: 10px;
+}
+.card *{
+    padding:1.5px 0
+}
+
+
+.card img{
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 10px;
+
+}
+.preparation{
+    margin:10px 0px;
+    background-color: rgb(247, 228, 231);
+    padding: 10px;
+}
+ul{
+    list-style-type: disc;  
+    padding-left: 20px; / 
+}
+ul li::marker{
+    color:hsl(14, 45%, 36%);
+    
+}
+ol li::marker{
+    color:hsl(14, 45%, 36%);;
+}
+ul,ol li{
+    color:black
+}
+
+ul,ol{
+    /* list-style-type: disc;   */
+    padding-left: 0;
+    margin-left: 23px;
+}
+
+h2{
+    font-size: 20px;
+    font-family: 'Young Serif';
+    color:hsl(24, 5%, 18%)
+}
+h3{
+    font-size: 15px;
+    font-family: 'Young Serif';
+    color:hsl(14, 45%, 36%);
+}
+.nutrition div{
+    display: flex;
+    justify-content: space-between;
+    padding: 2px 0px;
+    margin-left:20px;
+    margin-right:80px ;
+    font-size: 12px;
+}
+hr{
+    color:hsl(14, 45%, 36%);
+}
+h5{
+    color:hsl(332, 51%, 32%)
+}
+.item{
+    color:hsl(14, 45%, 36%);
+}
+
+
+
+
