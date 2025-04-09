@@ -1,0 +1,202 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html,body{
+    height:100%;
+    width:100%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    background-color: hsl(210, 46%, 95%)
+}
+.main{
+    display: flex;
+    justify-content: center;
+    height:300px;
+    width:800px;
+    align-items: center;
+    background-color:white;
+    border-radius: 12px;
+}
+img{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+}
+.image-wrapper{
+    width: 80%;
+    height: 100%;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: flex-start; */
+    /* align-items:  flex-start; */
+    width: 100%;
+    height: 100%; 
+    padding:30px;  
+    font-size: 13px;   
+}
+p{
+    margin:10px 0px;
+}
+.info{
+    margin:12px;
+    margin-left:0px ;
+    display: flex;   
+}
+.info img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+}
+.title{
+    display: flex;
+    flex-direction: column;
+    margin-left: 12px;
+
+}
+.share-image{
+    margin-right: 0px;
+    margin-left: 150px;
+    height:30px;
+    width:30px;
+    border-radius: 50%;
+    background-color:hsl(210, 46%, 95%) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.share-image img{
+    height:26px;
+    width:26px;
+    padding: 2px;
+}
+.share-container {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+  }
+.share-popup{
+    position:absolute;
+    bottom:70px;
+    right:-42px;
+    background-color: rgb(46, 32, 32);
+    color:white;
+    padding:10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap:12px;
+    font-size: 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    z-index:10;
+    display: none;
+}
+.share-popup::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    right: 50px;
+    border-width: 8px;
+    border-style: solid;
+    border-color: rgb(25, 23, 23) transparent transparent transparent;
+    z-index: 11;
+  }
+
+.share-popup img {
+    width: 20px;
+    height: 20px;
+    background-color: rgb(6, 7, 7);
+    border-radius: 0;
+    padding: 4px;
+  }
+  
+@media(max-width:697px){
+    html, body {
+        display: block; /* Remove flex centering */
+        margin: 0;
+        padding: 0;
+        height: 100%;
+      }
+        .main {
+            height: 100%;
+            width: 100%;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto;
+        }
+    
+        .image-wrapper {
+            grid-row: 1;
+            grid-column: 1;
+            width: 100%;
+            height: auto;
+        }
+    
+        .text {
+            display: contents;
+        }
+    
+        .para {
+            grid-row: 2;
+            grid-column: 1;
+            padding: 20px;
+        }
+    
+        .title{
+            z-index: 10;;
+        }
+        .info {
+            grid-row: 3;
+            grid-column: 1;
+            padding: 20px;
+        }
+        /* Add these styles at the bottom of your existing CSS */
+
+.info.active-share {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    /* position: relative; */
+  }
+  
+  .info.active-share img[alt="avatar"],
+  .info.active-share .title,
+  .info.active-share .share-image {
+    display: none;
+  }
+  
+  .info.active-share .share-popup {
+    display: flex !important;
+    background-color: transparent;
+    box-shadow: none;
+    position: static;
+    padding: 0;
+    gap: 15px;
+    font-size: 14px;
+  }
+  
+  .info.active-share .share-popup::after {
+    content: none;
+  }
+  
+  .info.active-share .share-popup img {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+    }
+    
+
+
+
+  
+  
