@@ -23,6 +23,7 @@ body{
     grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1.5fr;
     border-radius: 15px;
+    overflow: hidden; 
     background-color: white;
 }
 p , .date{
@@ -169,17 +170,17 @@ p , .date{
         position: relative;  /* Fixed at the bottom */
         bottom: 0;        /* Position it at the bottom */
         left: 0;          /* Align to the left */
-        width: 50%;      /* Full width */
+        width: 80%;      /* Full width */
         justify-content: space-around; /* Equal space between icons */
         background-color: hsl(217, 19%, 35%);
-        padding: 10px 0;  /* Adjust padding to give some space around */
-        z-index: 10;      /* Ensure it's on top */
+        padding: 10px 0;  
+        z-index: 10;      
     }
     
     .new-share-popup img {
         height: 24px;
         width: 24px;
-        margin: 0px 15px;
+        margin: 0px 2vw;
         object-fit: contain; /* Ensure icons are not stretched */
     }
     
