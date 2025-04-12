@@ -1,40 +1,36 @@
 console.log("hello world")
 document.addEventListener("DOMContentLoaded", function () {
-let shareContainer= document.querySelector(".share-container");
+    let shareContainer= document.querySelector(".share-container");
 let popup = document.querySelector(".share-popup");
+const infoBlock = document.querySelector(".info");
 shareContainer.addEventListener("click",function(e){
     e.stopPropagation();
-    popup.style.display=popup.style.display==="flex"?"none":"flex";
+    
     console.log("clicked share button")
-});
-Document.addEventListener("click",function(){
-    popup.style.display="none";
-});
-}
-)
-const mediaQuery=window.matchMedia("(max-width: 697px");
 
-function handlingScreenChange(e){
-    if(e.matches){
-        setupSmallScreen();
+    if(window.innerWidth<=650){
+       infoBlock.classList.toggle("change");
+       popup.classList.toggle("new-share-popup");
+        
     }
     else{
-        removeSetUp();
+        popup.style.display=popup.style.display==="flex"?"none":"flex";
+    }
+    console.log("outside")
+});
+
+
+//responsive logic
+const mediaQuery=window.matchMedia("(max-width: 650px)");
+function handlingScreen(e){
+    if(!e.matches){
+        popup.style.display='none';
+        infoBlock.classList.remove("change");
+        popup.classList.remove("new-share-popup");
+
     }
 }
-handlingScreenChange(mediaQuery);
-mediaQuery.addEventListener('change',handlingScreenChange);
-function setupSmallScreen(){
-    document.addEventListener("DOMContentLoaded",function(){
-const shareBtn=document.querySelector(".share-image");
-const infoBlock=document.querySelector(".info");
-shareBtn.addEventListener("click",function(e){
-    e.stopPropagation();
-    infoBlock.classList.toggle("active-share");
-    })
-})
-}
-function removeSetUp(){
-    const infoBlock=document.querySelector(".info");
-    infoBlock.classList.remove("active-share");
-}
+handlingScreen(mediaQuery);
+mediaQuery.addEventListener("change",handlingScreen
+
+)});
