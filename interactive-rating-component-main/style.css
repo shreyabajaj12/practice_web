@@ -1,0 +1,128 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Overpass';
+}
+html,body{
+    height: 100%;
+    width:100%;
+}
+.main{
+    height:100%;
+    width:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(216, 12%, 8%);
+}
+.card img{
+    padding-left:16px;
+}
+.card{
+    display:inline-block;
+    /* display: none; */
+}
+.card ,.card2{
+    height:400px;
+    width:400px;
+    background-color: hsl(213, 19%, 18%);
+    border-radius: 15px;
+    padding:40px;
+    position:relative;
+}
+.card h2{
+    margin-top: 32px;
+    font-size: 30px;
+    color:white;
+}
+.card p{
+    margin-top: 23px;
+    color:hsl(217, 12%, 63%)
+}
+.ratings{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.star{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 5px;
+    color: hsl(217, 12%, 63%);
+    cursor: pointer;
+    font-weight: bold;
+}
+.star:hover{
+    background-color: rgb(60, 60, 60);
+    color: hsl(217, 11%, 69%);
+}
+.submit{
+    position:absolute;
+    bottom:15px;
+    background-color: hsl(25, 97%, 53%);
+    width:80%;
+    height:42px;
+    border-radius: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    cursor: pointer;
+}
+.submit:hover{
+    background-color: hsl(25, 95%, 59%);
+}
+
+.card2{
+    display:none;
+    align-items: center;
+    /* justify-content: center; */
+    flex-direction: column;
+}
+
+.card2 h2{
+    margin-top: 40px;
+    color:white;
+}
+.card2 .marks{
+    margin-top: 29px;
+    color:hsl(25, 97%, 53%);
+}
+.card2 .text{
+    margin-top: 11px;
+    text-align: center;
+    color:hsl(217, 12%, 63%) ;
+}
+
+    @media (max-width:414px) {
+        .main{
+            height: 100vh;
+            width:100vw;
+            align-items: center;
+            justify-content: center;
+        }
+        .card , .card2{
+            width: 95%;
+        }
+        .card h2{
+            font-size: 8vw;
+            margin-top: 4vw;
+        }
+        .card p{
+            margin-top: 2vw;
+        }
+        .ratings{
+            margin-top: 7vw;
+        }
+        .submit{
+            width:75%;
+        }
+    }
+    
+    
