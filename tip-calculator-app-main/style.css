@@ -1,0 +1,198 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-size: 24px;
+    font-family: 'Space Mono';
+    font-weight: 700;
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+.main{
+    display:flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: hsl(185, 41%, 84%);
+    height:100%;
+    width:100%;
+    position: relative;  
+}
+.logo{
+    position: absolute;
+    top:23px;
+}
+
+.card{
+    height:450px;
+    width:750px;
+    background-color: white;
+    display: flex;
+    padding:30px;
+    border-radius: 17px;
+    color:grey;
+}
+.left{
+    height:100%;
+    width:50%;
+}
+.right{
+    background-color: hsl(183, 100%, 15%);
+    height:100%;
+    width:50%;
+    border-radius: 17px;
+    padding:30px;
+    position:relative;
+}
+label{
+    display: block;
+}
+.tip{
+    margin-top: 35px;
+}
+.tip button,.tip #custom{
+    width:95px;
+    margin: 9px 0px;
+    font-size: 19px;
+    height:40px;
+    border-radius: 9px;
+    flex-wrap: wrap;
+    background-color:hsl(183, 100%, 15%);
+    color:white;
+}
+button .btn{
+    font-weight: 500;
+}
+.tip button:hover{
+    color: hsl(183, 100%, 15%);
+    background-color:hsl(172, 67%, 45%) ;
+}
+.total-people{
+    margin-top: 25px;
+}
+.tip-amount{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;;
+}
+label, .per-tip{
+    font-size: 15px;
+}
+input{
+    margin-top: 12px;
+    border-radius: 9px;
+    padding:8px;
+    background-color: hsl(189, 47%, 97%);
+}
+.dollar-icon{
+    background-image: url(./images/icon-dollar.svg);
+    background-repeat: no-repeat;
+    text-align: right;          
+    background-position: 10px center;
+    background-size: 15px;
+
+}
+.people-icon{
+    background-image: url(./images/icon-person.svg);
+    background-repeat: no-repeat;
+    text-align: right;          
+    background-position: 10px center;
+    background-size: 15px;
+}
+.total{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:32px ;
+}
+.right button{
+    position:absolute;
+    width:85%;
+    bottom: 25px;
+    border-radius: 8px;
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+.amt{
+    font-size: 17px;
+    color:rgb(231, 230, 230);
+}
+.per-person{
+    font-size: 14px;;
+}
+.tip-amt,.total-amt{
+    font-size: 35px;
+    color: hsl(172, 67%, 45%)
+}
+.tip #custom{
+    background-color: hsl(189, 47%, 97%);
+    color: hsl(183, 100%, 15%);
+}
+.people{
+    display: inline;
+}
+.error{
+    font-size: 16px;
+    color: red;
+}
+@media (max-width:748px) {
+    html,body{
+        height:100vh;
+        width:100vw;
+    }
+    .main{
+        height:auto;
+        width:100vw;
+    }
+    .card{
+        margin-top:100px;
+        display:flex;
+        flex-direction: column;
+        height:auto;
+        align-items: center;
+        justify-content: center;
+        width:80vw;
+       
+    }
+    .left{
+        padding:0px;
+        width:100%;
+    }
+    .right{
+        width:100%;
+        height:300px;
+        margin-top: 22px;
+        display: flex;
+        flex-direction: column;
+        /* align-items: center; */
+    }
+    input{
+        width:100%;
+    }
+    .right button{
+        position:absolute;
+        width:80%;
+        bottom: 25px;
+        border-radius: 8px;
+    }
+    .tip-amount,.total{
+        display: flex;
+        justify-content: space-between;
+    }
+    .tip button ,.tip #custom{
+        width:30%;
+    }
+    .total-amt ,.tip-amt{
+        font-size: 7vw;
+        color:hsl(172, 67%, 45%);
+    }
+    
+}
+@media (max-width:461px) {
+    .tip button , .tip #custom{
+        width:45%;
+    }
+}
+
