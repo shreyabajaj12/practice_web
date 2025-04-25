@@ -1,0 +1,176 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Karla";
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+.main{
+    min-height: 100vh; /* Allow it to grow if needed */
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: hsl(148, 38%, 91%);
+    padding: 20px; 
+    overflow: auto; 
+    position:relative;
+}
+.card{
+    height:auto;
+    width:600px;
+    background-color:hsl(0, 0%, 100%);;
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: center;
+    padding:15px;
+    border-radius: 13px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+.heading{
+    font-size: 32px;
+    font-weight: 500;
+}
+.name{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 14px;
+}
+.fname ,.lname{
+    margin: 4px;
+}
+#first-name,#last-name{
+    width:100%;
+    padding:10px;
+}
+.lname,.fname{
+    width:100%;
+}
+.block{
+    display: block;
+}
+.types{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.general,.support{
+    border: 2px solid black;
+    margin:3px;
+    width:100%;
+    padding:10px;
+    border-radius: 9px;
+    display: flex;
+}
+
+#email-add{
+    width:100%;
+    padding:10px;
+}
+textarea{
+    width:100%;
+    padding: 10px;
+    border-radius: 9px;
+}
+.email,.cat,.text,.info,.btn{
+    margin-top: 14px;
+}
+.info{
+    display: flex;
+}
+input{
+    font-size: 15px;
+    border-radius: 9px;
+}
+input:focus{
+    /* border-color:hsl(187, 24%, 22%) ; */
+    border:1px solid hsl(187, 24%, 22%);
+}
+
+.btn{
+    width:100%;
+    padding:10px;
+    color:white;
+    background-color: hsl(169, 82%, 27%);
+    border-radius: 9px;
+}
+.btn:hover{
+    background-color: hsl(169, 54%, 41%);
+}
+.thank{
+    display: flex;
+    align-items: center;
+    position: absolute;
+    background-color: hsl(187, 24%, 22%);
+    color:white;
+    top:15px;
+    border-radius: 13px;
+    animation:trans 1s ease-in-out ;
+}
+.card2{
+    display:flex;
+    flex-direction: column;
+    padding:15px;
+}
+.sent{
+    display:flex;
+}
+p{
+    padding:5px;
+    font-weight: 600;
+}
+.confirm{
+    color:hsl(186, 12%, 65%);
+}
+.radio{
+    border:1px solid black;
+    border-radius: 50%;
+    width:20px;
+    height:20px;
+    overflow: hidden;
+}
+.radio img{
+    width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  display: none;
+}
+.check{
+    border:1px solid black;
+    width:20px;
+    height:20px;
+    overflow: hidden;
+}
+.check img{
+    width: 100%;
+  height: 100%;
+  display: none;
+}
+@keyframes trans{
+    from {
+        transform:translateY(-100px)
+    }
+    to{
+        transform:translateY(10px)
+    }
+}
+.error{
+    color:red;
+    display: none;
+}
+@media (max-width:515px) {
+    .name{
+        display: flex;
+        flex-direction: column;
+    }
+    .types{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
